@@ -1,0 +1,6 @@
+{
+  "brand": "Facehunch",
+  "endpoint": "https://facehunch.com/mcp",
+  "version": "1.0.0",
+  "scope": "profile:read"
+}

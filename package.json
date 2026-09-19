@@ -1,0 +1,59 @@
+{
+  "name": "facehunch-mcp",
+  "version": "1.0.0",
+  "description": "Facehunch MCP connector for Claude Desktop and other stdio clients",
+  "type": "module",
+  "bin": {
+    "facehunch-mcp": "server/index.js"
+  },
+  "files": [
+    "server",
+    "icon.png",
+    "manifest.json",
+    "server.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node --test test/*.test.mjs",
+    "bundle": "mcpb pack . facehunch.mcpb"
+  },
+  "dependencies": {
+    "mcp-remote": "0.14.2"
+  },
+  "devDependencies": {
+    "@anthropic-ai/mcpb": "2.1.2"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "author": "Codex",
+  "contributors": [
+    {
+      "name": "Codex"
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://facehunch.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facehunch/mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/facehunch/mcp-server/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "mcp",
+    "claude",
+    "desktop",
+    "facehunch"
+  ],
+  "mcpName": "io.github.facehunch/mcp-server",
+  "overrides": {
+    "tmp": "^0.2.6"
+  }
+}
