@@ -1,0 +1,38 @@
+{
+  "manifest_version": "0.3",
+  "name": "facehunch",
+  "display_name": "Facehunch",
+  "version": "1.2.0",
+  "description": "Connect your Facehunch account to an MCP client.",
+  "long_description": "get_profile reads your account. list_reports and get_report retrieve existing owned reports and available source links, respecting locked reports. No new face searches, identity inference or credit spending.",
+  "author": {
+    "name": "Codex"
+  },
+  "homepage": "https://facehunch.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/facehunch/mcp-server"
+  },
+  "icon": "icon.png",
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/index.js"
+      ]
+    }
+  },
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "node": ">=22"
+    }
+  },
+  "license": "MIT"
+}
