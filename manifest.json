@@ -1,0 +1,38 @@
+{
+  "manifest_version": "0.3",
+  "name": "facehunch",
+  "display_name": "Facehunch",
+  "version": "1.2.1",
+  "description": "Read-only MCP connector for Facehunch saved reports, access status and available source links.",
+  "long_description": "Facehunch helps readers understand photo-search methods, source pages and the limits of a visual result. Its guides distinguish finding copies of a photograph from comparing faces across different photographs. The workspace presents a fictional sample and consented API tests; the current FaceCheck test index does not produce reliable identity matches. get_profile reads your account. list_reports and get_report retrieve existing owned reports and available source links, respecting locked reports. No new face searches, identity inference or credit spending. The MCP does not initiate new face searches, identify people, infer sensitive traits or research personal information. It only retrieves existing owned reports. Locked results remain hidden. An empty report list means the account has no saved reports, not that a photograph has no online matches. Test results are not identity verification.",
+  "author": {
+    "name": "Codex"
+  },
+  "homepage": "https://facehunch.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/facehunch/mcp-server"
+  },
+  "icon": "icon.png",
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/index.js"
+      ]
+    }
+  },
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "node": ">=22"
+    }
+  },
+  "license": "MIT"
+}
